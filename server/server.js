@@ -5,7 +5,7 @@ import connectDB from './configs/mongodb.js'
 import connectCloudinary from './configs/cloudinary.js'
 import userRouter from './routes/userRoutes.js'
 import { clerkMiddleware } from '@clerk/express'
-import { clerkWebhooks, stripeWebhooks, midtransWebhook } from './controllers/webhooks.js'
+import { clerkWebhooks, midtransWebhook } from './controllers/webhooks.js'
 import educatorRouter from './routes/educatorRoutes.js'
 import courseRouter from './routes/courseRoute.js'
 import examRouter from './routes/examRoute.js'
@@ -238,7 +238,6 @@ Silakan tanyakan sesuatu yang lebih spesifik tentang materi kursus di atas!`;
 console.log('🛣️  Registering routes...');
 app.get('/', (req, res) => res.send("API Working"))
 app.post('/clerk', express.json() , clerkWebhooks)
-app.post('/stripe', express.raw({ type: 'application/json' }), stripeWebhooks)
 // Webhook disabled - using redirect-based enrollment instead
 // app.post('/midtrans-webhook', express.json(), midtransWebhook)
 app.use('/api/educator', express.json(), educatorRouter)

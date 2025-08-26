@@ -36,9 +36,6 @@ CLOUDINARY_SECRET_KEY="your_cloudinary_secret_key"
 CLERK_WEBHOOK_SECRET="your_clerk_webhook_secret"
 CLERK_PUBLISHABLE_KEY="your_clerk_publishable_key"
 CLERK_SECRET_KEY="your_clerk_secret_key"
-STRIPE_WEBHOOK_SECRET="your_stripe_webhook_secret"
-STRIPE_PUBLISHABLE_KEY="your_stripe_publishable_key"
-STRIPE_SECRET_KEY="your_stripe_secret_key"
 MIDTRANS_SERVER_KEY="your_midtrans_server_key"
 CLIENT_URL="https://your-frontend-domain.netlify.app"
 OPENROUTER_API_KEY="your_openrouter_api_key"
@@ -137,10 +134,6 @@ npm run build
    - Add your Railway backend URL
 3. Update webhook endpoints with your Railway URL
 
-### 4.2 Update Stripe Settings
-1. Go to [Stripe Dashboard](https://dashboard.stripe.com)
-2. Update webhook endpoints with your Railway URL
-3. Test payment flows
 
 ### 4.3 Update Midtrans Settings
 1. Go to Midtrans Dashboard

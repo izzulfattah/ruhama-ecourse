@@ -1,6 +1,5 @@
 import { Webhook } from "svix";
 import User from "../models/User.js";
-import stripe from "stripe";
 import { Purchase } from "../models/Purchase.js";
 import Course from "../models/Course.js";
 
@@ -62,90 +61,6 @@ export const clerkWebhooks = async (req, res) => {
   } catch (error) {
     res.json({ success: false, message: error.message })
   }
-}
-
-
-// Stripe Gateway Initialize
-const stripeInstance = new stripe(process.env.STRIPE_SECRET_KEY)
-
-
-// Stripe Webhooks to Manage Payments Action
-export const stripeWebhooks = async (request, response) => {
-  const sig = request.headers['stripe-signature'];
-
-  let event;
-
-  try {
-    event = stripeInstance.webhooks.constructEvent(request.body, sig, process.env.STRIPE_WEBHOOK_SECRET);
-  }
-  catch (err) {
-    response.status(400).send(`Webhook Error: ${err.message}`);
-  }
-
-  // Handle the event
-  switch (event.type) {
-    case 'payment_intent.succeeded': {
-
-      const paymentIntent = event.data.object;
-      const paymentIntentId = paymentIntent.id;
-
-      // Getting Session Metadata
-      const session = await stripeInstance.checkout.sessions.list({
-        payment_intent: paymentIntentId,
-      });
-
-      const { purchaseId } = session.data[0].metadata;
-
-      const purchaseData = await Purchase.findById(purchaseId)
-      const userData = await User.findById(purchaseData.userId)
-      const courseData = await Course.findById(purchaseData.courseId.toString())
-
-      // Convert IDs to strings for proper comparison
-      const courseIdStr = courseData._id.toString();
-      const userIdStr = userData._id.toString();
-      
-      // Check if user is already enrolled to avoid duplicates
-      const isUserEnrolled = userData.enrolledCourses.some(id => id.toString() === courseIdStr);
-      if (!isUserEnrolled) {
-        userData.enrolledCourses.push(courseData._id)
-        await userData.save()
-      }
-
-      // Check if student is already in course's enrolled students
-      const isStudentInCourse = courseData.enrolledStudents.some(id => id.toString() === userIdStr);
-      if (!isStudentInCourse) {
-        courseData.enrolledStudents.push(userData._id)
-        await courseData.save()
-      }
-
-      purchaseData.status = 'completed'
-      await purchaseData.save()
-
-      break;
-    }
-    case 'payment_intent.payment_failed': {
-      const paymentIntent = event.data.object;
-      const paymentIntentId = paymentIntent.id;
-
-      // Getting Session Metadata
-      const session = await stripeInstance.checkout.sessions.list({
-        payment_intent: paymentIntentId,
-      });
-
-      const { purchaseId } = session.data[0].metadata;
-
-      const purchaseData = await Purchase.findById(purchaseId)
-      purchaseData.status = 'failed'
-      await purchaseData.save()
-
-      break;
-    }
-    default:
-      console.log(`Unhandled event type ${event.type}`);
-  }
-
-  // Return a response to acknowledge receipt of the event
-  response.json({ received: true });
 }
 
 // === Midtrans Webhook ===
