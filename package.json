@@ -1,0 +1,24 @@
+{
+  "name": "lms-project",
+  "version": "1.0.0",
+  "description": "Learning Management System with React Frontend and Node.js Backend",
+  "scripts": {
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
+    "build": "npm run client:build",
+    "start": "npm run server:start",
+    "server:dev": "cd server && npm run dev",
+    "server:start": "cd server && npm start",
+    "client:dev": "cd client && npm run dev",
+    "client:build": "cd client && npm run build",
+    "client:preview": "cd client && npm run preview",
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install",
+    "heroku-postbuild": "npm run install:all && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

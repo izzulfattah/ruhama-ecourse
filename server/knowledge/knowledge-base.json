@@ -1,0 +1,91 @@
+{
+  "title": "E-Course Persiapan Pranikah",
+  "description": "E-Course Persiapan Pranikah adalah program pembelajaran online komprehensif yang dirancang khusus untuk mempersiapkan calon pasangan suami istri dalam menghadapi kehidupan berumah tangga. Program ini menyajikan materi pembelajaran yang memberikan pemahaman mendalam tentang aspek pernikahan secara emosional, mental, finansial, dan spiritual.",
+  "benefits": [
+    "Sistem pembelajaran fleksibel yang dapat diakses kapan saja dan di mana saja sesuai kebutuhan peserta",
+    "Memperoleh wawasan praktis dan realistis mengenai kehidupan pernikahan modern",
+    "Materi pembelajaran yang disusun oleh praktisi berpengalaman di bidang konseling pernikahan",
+    "Program yang sesuai untuk individu yang belum menikah maupun yang telah bertunangan"
+  ],
+  "main_topics": [
+    {
+      "title": "Pengenalan Pernikahan",
+      "description": "Pemahaman dasar mengenai institusi pernikahan dan persiapannya",
+      "points": [
+        "Pengertian pernikahan menurut perspektif hukum dan agama",
+        "Tujuan utama dan makna pernikahan dalam kehidupan"
+      ]
+    },
+    {
+      "title": "Komunikasi dalam Hubungan",
+      "description": "Strategi komunikasi efektif untuk membangun hubungan yang harmonis",
+      "points": [
+        "Pentingnya komunikasi yang sehat dan efektif dalam hubungan",
+        "Teknik dan strategi menyelesaikan konflik secara konstruktif"
+      ]
+    },
+    {
+      "title": "Manajemen Finansial Pasangan",
+      "description": "Pengelolaan keuangan keluarga yang efektif dan transparan",
+      "points": [
+        "Strategi mengatur dan mengelola keuangan bersama pasangan",
+        "Pentingnya transparansi dan keterbukaan dalam aspek finansial"
+      ]
+    },
+    {
+      "title": "Kesehatan Mental dan Emosional",
+      "description": "Menjaga keseimbangan psikologis dalam hubungan pernikahan",
+      "points": [
+        "Strategi menjaga kesehatan mental sebelum dan sesudah menikah",
+        "Pentingnya dukungan emosional dan psikologis dalam hubungan pasangan"
+      ]
+    },
+    {
+      "title": "Perencanaan Masa Depan",
+      "description": "Merancang visi dan misi keluarga untuk masa depan yang berkelanjutan",
+      "points": [
+        "Menyusun visi dan misi keluarga yang jelas dan terukur",
+        "Membangun komitmen jangka panjang dalam hubungan pernikahan"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Siapa saja yang dapat mengikuti program E-Course Persiapan Pranikah ini?",
+      "answer": "Program ini terbuka untuk semua individu yang memiliki komitmen serius untuk mempersiapkan diri dalam menjalani kehidupan pernikahan."
+    },
+    {
+      "question": "Apakah diperlukan latar belakang agama atau pengetahuan khusus untuk mengikuti kursus ini?",
+      "answer": "Tidak diperlukan latar belakang khusus. Materi pembelajaran dirancang dengan pendekatan yang sederhana, komprehensif, dan netral sehingga dapat dipahami oleh semua peserta."
+    },
+    {
+      "question": "Apakah tersedia sertifikat setelah menyelesaikan program?",
+      "answer": "Ya, sertifikat kelulusan akan diberikan kepada peserta yang telah menyelesaikan seluruh materi pembelajaran dan memenuhi persyaratan yang ditetapkan."
+    },
+    {
+      "question": "Bagaimana dengan kualitas dan relevansi materi pembelajaran?",
+      "answer": "Materi pembelajaran selalu dievaluasi dan diperbaharui secara berkala untuk memastikan relevansinya dengan kebutuhan dan perkembangan zaman saat ini."
+    },
+    {
+      "question": "Berapa lama durasi program E-Course Persiapan Pranikah?",
+      "answer": "Durasi program disesuaikan dengan kemampuan belajar masing-masing peserta karena menggunakan sistem pembelajaran fleksibel. Peserta dapat menyelesaikan program sesuai dengan kecepatan belajar mereka sendiri."
+    },
+    {
+      "question": "Apakah ada biaya untuk mengikuti program ini?",
+      "answer": "Untuk informasi mengenai biaya program, silakan menghubungi tim layanan pelanggan kami untuk mendapatkan detail yang lengkap."
+    }
+  ],
+  "course_requirements": [
+    "Akses internet yang stabil untuk mengakses platform pembelajaran",
+    "Komitmen waktu untuk mengikuti seluruh materi pembelajaran",
+    "Motivasi dan keseriusan dalam mempersiapkan kehidupan pernikahan"
+  ],
+  "learning_outcomes": [
+    "Pemahaman komprehensif tentang aspek-aspek penting dalam pernikahan",
+    "Kemampuan berkomunikasi efektif dengan pasangan",
+    "Keterampilan mengelola keuangan keluarga",
+    "Kemampuan menjaga kesehatan mental dan emosional dalam hubungan",
+    "Keterampilan merencanakan masa depan keluarga"
+  ],
+  "closing": "E-Course Persiapan Pranikah ini dirancang tidak hanya untuk memberikan persiapan teknis, tetapi juga untuk membangun pola pikir, kematangan mental, dan keterampilan hidup bersama pasangan. Pernikahan yang sukses memerlukan persiapan yang matang dan komprehensif, bukan hanya berdasarkan perasaan semata. Oleh karena itu, penting bagi setiap individu untuk mempersiapkan diri dengan pengetahuan dan pemahaman yang tepat sebelum memasuki jenjang pernikahan."
+}
